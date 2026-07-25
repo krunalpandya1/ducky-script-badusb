@@ -1,0 +1,14 @@
+REM =======================================
+REM Battery Report Payload
+REM For Windows Devices
+REM By GURU
+REM =======================================
+
+DELAY 1000
+GUI r
+DELAY 500
+
+REM Generate the report in the Temp folder and open it immediately after
+STRING powershell -c "powercfg /batteryreport /output $env:TEMP\battery-report.html; Invoke-Item $env:TEMP\battery-report.html"
+DELAY 500
+ENTER
